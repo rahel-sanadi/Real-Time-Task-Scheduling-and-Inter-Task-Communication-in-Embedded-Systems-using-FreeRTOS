@@ -1,0 +1,32 @@
+LPC1768 FreeRTOS Task Management Demo
+
+This repository contains a demonstration of FreeRTOS task management APIs on the LPC1768 microcontroller. The project shows how to suspend and resume tasks while performing LED blinking and UART message printing.
+
+Project Overview
+
+Microcontroller: LPC1768
+
+RTOS: FreeRTOS
+
+Demonstrated APIs: vTaskSuspend(), vTaskResume()
+
+Peripherals Used: GPIO (LED), UART0 (Serial Communication)
+
+The project contains two tasks:
+
+LED Task: Blinks LED1 (P1.19) every 500ms and temporarily suspends the Print Task.
+
+Print Task: Sends a counter message over UART0 every second.
+
+File Structure
+File	Description
+task_mgmt_demo.c	Main program demonstrating task creation, LED control, and task suspension/resumption.
+uart0.c	UART0 driver for initializing UART, transmitting, and receiving bytes/strings.
+uart0.h	UART0 header file with macros, function prototypes, and configuration definitions.
+Features
+
+LED Blinking: LED toggles every 500ms using the LED task.
+
+UART Communication: Print task sends messages with a counter over UART0.
+
+Task Management: After 5 LED blinks, the Print Task is suspended for 3 seconds and then resumed.
