@@ -1,1 +1,0 @@
-# Real-Time-Task-Scheduling-and-Inter-Task-Communication-in-Embedded-Systems-using-FreeRTOS
