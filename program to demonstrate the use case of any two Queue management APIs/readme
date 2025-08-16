@@ -1,0 +1,34 @@
+LPC1768 FreeRTOS Queue Management Demo
+
+This repository demonstrates the use of FreeRTOS queue management APIs on the LPC1768 microcontroller. The project shows how to send and receive data between tasks using a queue while performing LED blinking and UART message printing.
+
+Project Overview
+
+Microcontroller: LPC1768
+
+RTOS: FreeRTOS
+
+Demonstrated APIs: xQueueSendToBack(), xQueueReceive(), uxQueueMessagesWaiting()
+
+Peripherals Used: GPIO (LED), UART0 (Serial Communication)
+
+The project contains two tasks:
+
+Producer Task: Adds numbers to the queue every second.
+
+Consumer Task: Reads numbers from the queue and blinks LED1 (P1.19) for 200ms on each received number.
+
+File Structure
+File	Description
+queue1.c	Main program demonstrating queue creation, sending, and receiving data between tasks.
+uart0.c	UART0 driver for initialization, transmitting, and receiving bytes/strings.
+uart0.h	UART0 header file with macros, function prototypes, and configuration definitions.
+Features
+
+Producer-Consumer Model: Producer adds integers to the queue, and Consumer processes them.
+
+Queue Status Monitoring: Uses uxQueueMessagesWaiting() to track the number of free slots.
+
+LED Indication: Consumer blinks LED1 when a number is received.
+
+UART Output: Transmits messages indicating items added to or taken from the queue.
