@@ -1,0 +1,34 @@
+Temperature Monitoring and Alert System with LED Indicator Using LPC1768 and FreeRTOS
+
+This repository demonstrates a temperature monitoring system using FreeRTOS on the LPC1768 microcontroller. The system simulates temperature readings, triggers alerts when the temperature exceeds a threshold, and provides LED visual alerts and UART message notifications.
+
+Project Overview
+
+Microcontroller: LPC1768
+
+RTOS: FreeRTOS
+
+Peripherals Used: GPIO (LED), UART0
+
+Simulated Feature: Temperature sensor readings
+
+The project contains two tasks:
+
+Temperature Read Task: Reads simulated temperature values every 1 second and triggers alerts if the temperature exceeds 35°C.
+
+Alert Task: Blinks LED1 (P1.19) three times to indicate a high-temperature alert and then suspends itself until the next alert.
+
+File Structure
+File	Description
+temp_monitor_demo.c	Main program demonstrating temperature monitoring, alert triggering, and LED indication.
+uart0.c	UART0 driver for initialization, transmitting, and receiving bytes/strings.
+uart0.h	UART0 header file with macros, function prototypes, and configuration definitions.
+Features
+
+Temperature Simulation: Incremental temperature values from 25°C to 40°C for demonstration.
+
+High-Temperature Alerts: Triggers when simulated temperature exceeds 35°C.
+
+LED Alert: LED1 blinks three times on each high-temperature event.
+
+UART Notifications: Transmits temperature readings and alert messages over UART0.
